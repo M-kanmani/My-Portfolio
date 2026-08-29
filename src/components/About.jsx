@@ -35,6 +35,36 @@ function Counter({ target, suffix }) {
 function About() {
   return (
     <section id="about" style={styles.section}>
+      {/* Mobile Responsive Fixes */}
+      <style>{`
+        @media screen and (max-width: 768px) {
+          #about {
+            padding: 40px 16px !important;
+            text-align: center !important;
+          }
+          #about .contentWrapper {
+            align-items: center !important;
+            text-align: center !important;
+          }
+          #about h2 {
+            font-size: 2rem !important;
+          }
+          #about .description {
+            text-align: center !important;
+            padding: 0 5px !important;
+          }
+          #about .gradientBorder {
+            width: 230px !important;
+            height: 230px !important;
+          }
+          #about .cardsGrid {
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 10px !important;
+            width: 100% !important;
+          }
+        }
+      `}</style>
+
       <div style={styles.container}>
         
         {/* Profile Image */}
@@ -45,7 +75,7 @@ function About() {
           transition={{ duration: 0.8 }}
           style={styles.imageWrapper}
         >
-          <div style={styles.gradientBorder}>
+          <div className="gradientBorder" style={styles.gradientBorder}>
             <img src={profile} alt="profile" style={styles.image} />
           </div>
         </motion.div>
@@ -56,20 +86,21 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="contentWrapper"
           style={styles.contentWrapper}
         >
           <p style={styles.subHeading}>About Me</p>
 
           <h2 style={styles.heading}>Who I Am?</h2>
 
-          <p style={styles.description}>
+          <p className="description" style={styles.description}>
             I'm M. Kanmani, a passionate developer interested in building modern
             web applications. I love working with Java, React, Node.js and MongoDB
             to create scalable solutions.
           </p>
 
           {/* Animated Info Cards */}
-          <div style={styles.cardsGrid}>
+          <div className="cardsGrid" style={styles.cardsGrid}>
             
             {/* Projects Card */}
             <motion.div
@@ -124,18 +155,20 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "60px 24px",
+    boxSizing: "border-box",
   },
   container: {
     maxWidth: "1150px",
     width: "100%",
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     gap: "48px",
     alignItems: "center",
   },
   imageWrapper: {
     display: "flex",
     justifyContent: "center",
+    width: "100%",
   },
   gradientBorder: {
     width: "288px",
@@ -155,6 +188,7 @@ const styles = {
   contentWrapper: {
     display: "flex",
     flexDirection: "column",
+    width: "100%",
   },
   subHeading: {
     color: "#60a5fa",
