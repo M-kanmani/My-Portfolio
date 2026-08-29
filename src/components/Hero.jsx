@@ -105,24 +105,18 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* 100% Precise True Center Alignment CSS for Mobile */}
+      {/* Desktop view safe, Normal Mobile View Centered CSS */}
       <style>{`
         @media screen and (max-width: 768px) {
           body, html {
             overflow-x: hidden !important;
             width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
           }
           section {
             padding: 30px 16px !important;
             box-sizing: border-box !important;
             width: 100% !important;
             min-height: auto !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
           }
           .hero-container {
             display: flex !important;
@@ -150,7 +144,7 @@ function Hero() {
             box-sizing: border-box !important;
           }
           .hero-name {
-            font-size: 1.9rem !important;
+            font-size: 2rem !important;
             word-break: break-word !important;
             text-align: center !important;
             width: 100% !important;
@@ -175,7 +169,7 @@ function Hero() {
             justify-content: center !important;
             align-items: center !important;
             width: 100% !important;
-            gap: 10px !important;
+            gap: 12px !important;
             margin: 0 auto !important;
           }
           .hero-socials {
@@ -186,35 +180,9 @@ function Hero() {
             margin-top: 15px !important;
           }
           .gradient-card {
-            width: 160px !important;
-            height: 160px !important;
+            width: 170px !important;
+            height: 170px !important;
             margin: 0 auto 10px auto !important;
-          }
-        }
-
-        /* Mobile Desktop Site Mode */
-        @media screen and (min-width: 769px) and (max-width: 1200px) {
-          .hero-container {
-            flex-direction: column-reverse !important;
-            align-items: center !important;
-            text-align: center !important;
-            gap: 24px !important;
-          }
-          .hero-left {
-            align-items: center !important;
-            text-align: center !important;
-            width: 100% !important;
-          }
-          .hero-desc {
-            text-align: center !important;
-            padding: 0 10px !important;
-          }
-          .hero-btns, .hero-socials {
-            justify-content: center !important;
-          }
-          .gradient-card {
-            width: 190px !important;
-            height: 190px !important;
           }
         }
       `}</style>
