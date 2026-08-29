@@ -1,71 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import React from "react";
 
 function ParticlesBackground() {
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
-  if (!init) {
-    return null;
-  }
-
   return (
-    <Particles
-      id="tsparticles"
-      options={{
-        background: {
-          color: {
-            value: "#050816",
-          },
-        },
-        fpsLimit: 60,
-        particles: {
-          number: {
-            value: 60,
-          },
-          color: {
-            value: "#3B82F6",
-          },
-          links: {
-            enable: true,
-            color: "#3B82F6",
-            distance: 150,
-            opacity: 0.3,
-          },
-          move: {
-            enable: true,
-            speed: 1,
-          },
-          size: {
-            value: {
-              min: 1,
-              max: 3,
-            },
-          },
-          opacity: {
-            value: 0.5,
-          },
-        },
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-          },
-        },
-        detectRetina: true,
-      }}
-      className="absolute inset-0"
-    />
+    <div className="absolute inset-0 overflow-hidden pointer-events-none bg-[#050816]">
+      {/* Decorative gradient glow effect mimicking particles */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    </div>
   );
 }
 
