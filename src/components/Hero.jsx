@@ -105,22 +105,24 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Strict Mobile Alignment & Spacing Fixes */}
+      {/* Optimized Responsive CSS for Mobile Normal & Desktop Modes */}
       <style>{`
-        @media (max-width: 950px), (max-device-width: 950px) {
+        @media screen and (max-width: 950px) {
           body, html {
             overflow-x: hidden !important;
+            width: 100% !important;
           }
           section {
-            padding: 50px 16px 70px 16px !important;
+            padding: 40px 16px !important;
             box-sizing: border-box !important;
             width: 100% !important;
+            min-height: auto !important;
           }
           .hero-container {
             flex-direction: column-reverse !important;
             align-items: center !important;
             text-align: center !important;
-            gap: 24px !important;
+            gap: 20px !important;
             width: 100% !important;
             max-width: 100% !important;
             margin: 0 auto !important;
@@ -132,7 +134,7 @@ function Hero() {
             align-items: center !important;
             text-align: center !important;
             width: 100% !important;
-            padding: 0 8px !important;
+            padding: 0 !important;
             box-sizing: border-box !important;
           }
           .hero-name {
@@ -145,19 +147,18 @@ function Hero() {
           .hero-desc {
             font-size: 0.95rem !important;
             padding: 0 10px !important;
-            box-sizing: border-box !important;
             text-align: center !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
             width: 100% !important;
           }
           .hero-btns {
             justify-content: center !important;
             width: 100% !important;
+            gap: 12px !important;
           }
           .hero-socials {
             justify-content: center !important;
             width: 100% !important;
+            margin-top: 20px !important;
           }
           .gradient-card {
             width: 190px !important;
