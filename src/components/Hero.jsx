@@ -105,17 +105,21 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Internal Responsive CSS Injection for Mobile Fixes */}
+      {/* Advanced Responsive CSS for Mobile & Desktop Mode Fixes */}
       <style>{`
-        @media (max-width: 900px) {
+        @media (max-width: 950px), (max-device-width: 950px) {
           section {
-            padding: 40px 16px !important;
+            padding: 40px 20px !important;
+            box-sizing: border-box !important;
           }
           .hero-container {
             flex-direction: column-reverse !important;
             align-items: center !important;
             text-align: center !important;
-            gap: 32px !important;
+            gap: 28px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
           }
           .hero-left {
             display: flex !important;
@@ -123,24 +127,30 @@ function Hero() {
             align-items: center !important;
             text-align: center !important;
             width: 100% !important;
+            padding: 0 10px !important;
+            box-sizing: border-box !important;
           }
           .hero-name {
-            font-size: 2.5rem !important;
+            font-size: 2.3rem !important;
           }
           .hero-role {
-            font-size: 1.35rem !important;
+            font-size: 1.25rem !important;
           }
           .hero-left p {
             text-align: center !important;
             margin-left: auto !important;
             margin-right: auto !important;
+            max-width: 100% !important;
           }
           div[style*="flex-wrap: wrap"] {
             justify-content: center !important;
           }
+          .hero-left div[style*="display: flex"] {
+            justify-content: center !important;
+          }
           .gradient-card {
-            width: 220px !important;
-            height: 220px !important;
+            width: 200px !important;
+            height: 200px !important;
           }
         }
       `}</style>
