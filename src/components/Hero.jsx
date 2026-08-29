@@ -105,24 +105,30 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Perfect Centered Responsive CSS for Mobile */}
+      {/* 100% Precise True Center Alignment CSS for Mobile */}
       <style>{`
-        /* 1. Normal Mobile View */
         @media screen and (max-width: 768px) {
           body, html {
             overflow-x: hidden !important;
             width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
           }
           section {
-            padding: 30px 20px !important;
+            padding: 30px 16px !important;
             box-sizing: border-box !important;
             width: 100% !important;
             min-height: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
           }
           .hero-container {
             display: flex !important;
             flex-direction: column-reverse !important;
             align-items: center !important;
+            justify-content: center !important;
             text-align: center !important;
             gap: 20px !important;
             width: 100% !important;
@@ -135,46 +141,58 @@ function Hero() {
             display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
+            justify-content: center !important;
             text-align: center !important;
             width: 100% !important;
-            padding: 0 10px !important;
-            margin: 0 !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 auto !important;
             box-sizing: border-box !important;
           }
           .hero-name {
-            font-size: 2rem !important;
+            font-size: 1.9rem !important;
             word-break: break-word !important;
             text-align: center !important;
+            width: 100% !important;
           }
           .hero-role {
             font-size: 1.1rem !important;
             text-align: center !important;
+            width: 100% !important;
           }
           .hero-desc {
             font-size: 0.9rem !important;
             padding: 0 10px !important;
             text-align: center !important;
             width: 100% !important;
+            margin: 0 auto !important;
             box-sizing: border-box !important;
           }
           .hero-btns {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
             justify-content: center !important;
+            align-items: center !important;
             width: 100% !important;
-            gap: 12px !important;
+            gap: 10px !important;
+            margin: 0 auto !important;
           }
           .hero-socials {
+            display: flex !important;
             justify-content: center !important;
+            align-items: center !important;
             width: 100% !important;
             margin-top: 15px !important;
           }
           .gradient-card {
             width: 160px !important;
             height: 160px !important;
-            margin-top: 10px !important;
+            margin: 0 auto 10px auto !important;
           }
         }
 
-        /* 2. Mobile "Desktop Site" Mode Only */
+        /* Mobile Desktop Site Mode */
         @media screen and (min-width: 769px) and (max-width: 1200px) {
           .hero-container {
             flex-direction: column-reverse !important;
