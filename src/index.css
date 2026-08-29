@@ -34,7 +34,7 @@ body {
 /* Entire Application Root Centering */
 #root {
   width: 100%;
-  max-width: 100vw;
+  max-width: 1280px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ body {
 /* Sections Layout & Alignments */
 main, section {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -231,6 +231,24 @@ main, section {
 @media (max-width: 1024px) {
   #spacer {
     height: 48px;
+  }
+}
+
+/* Mobile Responsive Fixes for Navbar & Sections */
+@media (max-width: 900px) {
+  header nav[style*="display: flex"] {
+    display: none !important;
+  }
+  
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (min-width: 901px) {
+  button[aria-label="Toggle Menu"] {
+    display: none !important;
   }
 }
 
