@@ -298,3 +298,50 @@ main, section {
 ::-webkit-scrollbar-thumb:hover {
   background: #38bdf8;
 }
+
+/* Perfect Mobile View Padding & Centering Fix */
+@media (max-width: 900px) {
+  header nav[style*="display: flex"] {
+    display: none !important;
+  }
+  
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #root {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
+  }
+
+  /* Mukkiyamaana fix: Ellaa sections-kum left & right gap varum, so text cut aagathu */
+  section, main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #center {
+    width: 100% !important;
+    padding: 24px 16px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 901px) {
+  button[aria-label="Toggle Menu"] {
+    display: none !important;
+  }
+}
