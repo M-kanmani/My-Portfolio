@@ -105,15 +105,15 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Optimized Responsive CSS for Mobile Normal & Desktop Modes */}
+      {/* Universal Responsive CSS for Mobile & Desktop Browser Modes */}
       <style>{`
-        @media screen and (max-width: 950px) {
+        @media screen and (max-width: 1200px) {
           body, html {
             overflow-x: hidden !important;
             width: 100% !important;
           }
           section {
-            padding: 40px 16px !important;
+            padding: 30px 20px !important;
             box-sizing: border-box !important;
             width: 100% !important;
             min-height: auto !important;
@@ -122,10 +122,11 @@ function Hero() {
             flex-direction: column-reverse !important;
             align-items: center !important;
             text-align: center !important;
-            gap: 20px !important;
+            gap: 24px !important;
             width: 100% !important;
             max-width: 100% !important;
             margin: 0 auto !important;
+            padding: 0 10px !important;
             box-sizing: border-box !important;
           }
           .hero-left {
@@ -135,6 +136,7 @@ function Hero() {
             text-align: center !important;
             width: 100% !important;
             padding: 0 !important;
+            margin: 0 !important;
             box-sizing: border-box !important;
           }
           .hero-name {
@@ -149,6 +151,7 @@ function Hero() {
             padding: 0 10px !important;
             text-align: center !important;
             width: 100% !important;
+            box-sizing: border-box !important;
           }
           .hero-btns {
             justify-content: center !important;
