@@ -23,13 +23,13 @@ function Hero() {
 
           <h2 style={styles.role} className="hero-role">Full Stack Developer</h2>
 
-          <p style={styles.description}>
+          <p style={styles.description} className="hero-desc">
             I build modern and scalable web applications using Java, React, Node.js and MongoDB. 
             Passionate about problem solving and creating real-world software solutions.
           </p>
 
           {/* Action Buttons */}
-          <div style={styles.btnGroup}>
+          <div style={styles.btnGroup} className="hero-btns">
             <a
               href="/kanmani-resume.pdf"
               target="_blank"
@@ -48,7 +48,7 @@ function Hero() {
           </div>
 
           {/* Social Brand Icon Links (GitHub, LinkedIn, Email) */}
-          <div style={styles.socialContainer}>
+          <div style={styles.socialContainer} className="hero-socials">
             {/* GitHub */}
             <a
               href="https://github.com/M-kanmani"
@@ -105,21 +105,26 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Advanced Responsive CSS for Mobile & Desktop Mode Fixes */}
+      {/* Strict Mobile Alignment & Spacing Fixes */}
       <style>{`
         @media (max-width: 950px), (max-device-width: 950px) {
+          body, html {
+            overflow-x: hidden !important;
+          }
           section {
-            padding: 40px 20px !important;
+            padding: 50px 16px 70px 16px !important;
             box-sizing: border-box !important;
+            width: 100% !important;
           }
           .hero-container {
             flex-direction: column-reverse !important;
             align-items: center !important;
             text-align: center !important;
-            gap: 28px !important;
+            gap: 24px !important;
             width: 100% !important;
             max-width: 100% !important;
             margin: 0 auto !important;
+            box-sizing: border-box !important;
           }
           .hero-left {
             display: flex !important;
@@ -127,30 +132,37 @@ function Hero() {
             align-items: center !important;
             text-align: center !important;
             width: 100% !important;
-            padding: 0 10px !important;
+            padding: 0 8px !important;
             box-sizing: border-box !important;
           }
           .hero-name {
-            font-size: 2.3rem !important;
+            font-size: 2.2rem !important;
+            word-break: break-word !important;
           }
           .hero-role {
-            font-size: 1.25rem !important;
+            font-size: 1.2rem !important;
           }
-          .hero-left p {
+          .hero-desc {
+            font-size: 0.95rem !important;
+            padding: 0 10px !important;
+            box-sizing: border-box !important;
             text-align: center !important;
             margin-left: auto !important;
             margin-right: auto !important;
-            max-width: 100% !important;
+            width: 100% !important;
           }
-          div[style*="flex-wrap: wrap"] {
+          .hero-btns {
             justify-content: center !important;
+            width: 100% !important;
           }
-          .hero-left div[style*="display: flex"] {
+          .hero-socials {
             justify-content: center !important;
+            width: 100% !important;
           }
           .gradient-card {
-            width: 200px !important;
-            height: 200px !important;
+            width: 190px !important;
+            height: 190px !important;
+            margin-top: 10px !important;
           }
         }
       `}</style>
