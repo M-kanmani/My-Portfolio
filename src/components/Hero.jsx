@@ -13,15 +13,15 @@ function Hero() {
       <div style={styles.glowBottomRight}></div>
 
       {/* Main Responsive Grid Container */}
-      <div style={styles.container}>
+      <div style={styles.container} className="hero-container">
         
         {/* Left Side: Content & Action Links */}
-        <div style={styles.leftContent}>
+        <div style={styles.leftContent} className="hero-left">
           <p style={styles.greeting}>👋 Hello, I'm</p>
 
-          <h1 style={styles.name}>M. Kanmani</h1>
+          <h1 style={styles.name} className="hero-name">M. Kanmani</h1>
 
-          <h2 style={styles.role}> Full Stack Developer</h2>
+          <h2 style={styles.role} className="hero-role">Full Stack Developer</h2>
 
           <p style={styles.description}>
             I build modern and scalable web applications using Java, React, Node.js and MongoDB. 
@@ -89,9 +89,9 @@ function Hero() {
         </div>
 
         {/* Right Side: Profile Image */}
-        <div style={styles.imageSection}>
+        <div style={styles.imageSection} className="hero-img-section">
           <div style={styles.ambientGlow}></div>
-          <div style={styles.gradientBorderCard}>
+          <div style={styles.gradientBorderCard} className="gradient-card">
             <div style={styles.imageInnerWrapper}>
               <img src={profile} alt="Kanmani" style={styles.profileImg} />
             </div>
@@ -104,6 +104,46 @@ function Hero() {
       <div style={styles.scrollDown}>
         ↓ Scroll Down
       </div>
+
+      {/* Internal Responsive CSS Injection for Mobile Fixes */}
+      <style>{`
+        @media (max-width: 900px) {
+          section {
+            padding: 40px 16px !important;
+          }
+          .hero-container {
+            flex-direction: column-reverse !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 32px !important;
+          }
+          .hero-left {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            width: 100% !important;
+          }
+          .hero-name {
+            font-size: 2.5rem !important;
+          }
+          .hero-role {
+            font-size: 1.35rem !important;
+          }
+          .hero-left p {
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+          div[style*="flex-wrap: wrap"] {
+            justify-content: center !important;
+          }
+          .gradient-card {
+            width: 220px !important;
+            height: 220px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
@@ -120,6 +160,8 @@ const styles = {
     justifyContent: "center",
     overflow: "hidden",
     padding: "60px 20px",
+    width: "100%",
+    boxSizing: "border-box",
   },
   glowTopLeft: {
     position: "absolute",
@@ -153,11 +195,11 @@ const styles = {
     gap: "48px",
     position: "relative",
     zIndex: 10,
-    flexWrap: "wrap-reverse",
+    boxSizing: "border-box",
   },
   leftContent: {
     flex: "1",
-    minWidth: "300px",
+    minWidth: "280px",
   },
   greeting: {
     color: "#60a5fa",
