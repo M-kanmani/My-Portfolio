@@ -105,26 +105,25 @@ function Hero() {
         ↓ Scroll Down
       </div>
 
-      {/* Separate Responsive CSS for Normal Mobile & Desktop Mode */}
+      {/* Perfect Centered Responsive CSS for Mobile */}
       <style>{`
-        /* 1. Normal Mobile View (Phone Browsers) */
+        /* 1. Normal Mobile View */
         @media screen and (max-width: 768px) {
           body, html {
             overflow-x: hidden !important;
             width: 100% !important;
           }
           section {
-            padding: 30px 16px !important;
+            padding: 30px 20px !important;
             box-sizing: border-box !important;
             width: 100% !important;
             min-height: auto !important;
           }
           .hero-container {
             display: flex !important;
-            flex-direction: row !important;
+            flex-direction: column-reverse !important;
             align-items: center !important;
-            justify-content: space-between !important;
-            text-align: left !important;
+            text-align: center !important;
             gap: 20px !important;
             width: 100% !important;
             max-width: 100% !important;
@@ -135,41 +134,43 @@ function Hero() {
           .hero-left {
             display: flex !important;
             flex-direction: column !important;
-            align-items: flex-start !important;
-            text-align: left !important;
-            width: 60% !important;
-            padding: 0 !important;
+            align-items: center !important;
+            text-align: center !important;
+            width: 100% !important;
+            padding: 0 10px !important;
             margin: 0 !important;
             box-sizing: border-box !important;
           }
           .hero-name {
             font-size: 2rem !important;
             word-break: break-word !important;
+            text-align: center !important;
           }
           .hero-role {
             font-size: 1.1rem !important;
+            text-align: center !important;
           }
           .hero-desc {
             font-size: 0.9rem !important;
-            padding: 0 !important;
-            text-align: left !important;
+            padding: 0 10px !important;
+            text-align: center !important;
             width: 100% !important;
             box-sizing: border-box !important;
           }
           .hero-btns {
-            justify-content: flex-start !important;
+            justify-content: center !important;
             width: 100% !important;
-            gap: 10px !important;
+            gap: 12px !important;
           }
           .hero-socials {
-            justify-content: flex-start !important;
+            justify-content: center !important;
             width: 100% !important;
             margin-top: 15px !important;
           }
           .gradient-card {
-            width: 150px !important;
-            height: 150px !important;
-            margin-top: 0 !important;
+            width: 160px !important;
+            height: 160px !important;
+            margin-top: 10px !important;
           }
         }
 
